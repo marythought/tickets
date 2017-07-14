@@ -2,6 +2,8 @@
 
 A program to check if you are holding a winning raffle ticket at #gophercon.
 
+This program does not tell you the winning raffle ticket numbers in advance, sorry. But it can help you get organized to immediately identify if one of your tickets is a winner, after they announce the winners.
+
 ## Install
 
 `git clone github.com/marythought/tickets`
@@ -14,7 +16,7 @@ Replace tickets.txt file with your personal ticket numbers.
 
  `$ go build`
   
- Type in "tickets" followed by the winning ticket number:
+ AT RAFFLE TICKET ANNOUNCEMENT TIME type in "tickets" followed by the winning ticket number they announce:
  
  `$ tickets 0220173`
  
