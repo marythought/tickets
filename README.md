@@ -8,8 +8,7 @@ A program to check if you are holding a winning raffle ticket at #gophercon.
 
 ## Customize
 
-Replace tickets.go line 4 with your personal ticket numbers.
-`tickets := []string{"0020172", "0225210", "0924192", ... }`
+Replace tickets.txt file with your personal ticket numbers.
 
 ## Run
 
@@ -26,6 +25,8 @@ Replace tickets.go line 4 with your personal ticket numbers.
 or
 
 `nope`
+
+If you add additional ticket numbers, they will be read at runtime. No need to rebuild. :)
 
 ## License
 MIT
