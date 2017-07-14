@@ -4,7 +4,7 @@ A program to check if you are holding a winning raffle ticket at #gophercon.
 
 ## Install
 
-`go get github.com/marythought/tickets`
+`git clone github.com/marythought/tickets`
 
 ## Customize
 
