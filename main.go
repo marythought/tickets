@@ -2,19 +2,33 @@ package main
 
 import (
 	"fmt"
-	"os"
+	"github.com/slowtrailrunner/tickets/check"
 )
 
 // usage: tickets 0220173
 func main() {
-	winning_ticket := os.Args[1]
-	winner, err := CheckTicket(winning_ticket)
+	quitters := map[string]bool{"quit":true, "q":true}
+	var ticket string
+	for ticket != "quit" {
+		fmt.Print("Please enter your ticket number ('quit or q' to quit): ")
+		fmt.Scan(&ticket)
+		if !quitters[ticket]  {
+			fmt.Println(ticket, "is a ", checkTicket(ticket))
+		} else {
+			fmt.Println("Good bye.")
+			break
+		}
+	}
+}
+
+func checkTicket(ticket string) string {
+	winner, err := check.Ticket(ticket)
 	if err != nil {
 		fmt.Println(err)
 	}
 	if winner {
-		fmt.Println("winner!!", winning_ticket)
+		return "Winner!!"
 	} else {
-		fmt.Println("nope")
+		return "Loser!!"
 	}
 }

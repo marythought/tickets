@@ -1,4 +1,4 @@
-package main
+package check
 
 import (
 	"errors"
@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func CheckTicket(winning_ticket string) (bool, error) {
+func Ticket(winning_ticket string) (bool, error) {
 	tickets, err := getTickets()
 	if err != nil {
 		fmt.Println(err)
@@ -22,7 +22,7 @@ func CheckTicket(winning_ticket string) (bool, error) {
 }
 
 func getTickets() ([]string, error) {
-	content, err := ioutil.ReadFile("tickets.txt")
+	content, err := ioutil.ReadFile("data/tickets.txt")
 	if err != nil {
 		return []string{}, errors.New("no tickets.txt file found")
 	}
